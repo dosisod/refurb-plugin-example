@@ -1,4 +1,4 @@
-refurb==0.2.3
+refurb==0.2.4
 mypy==0.971
 mypy-extensions==0.4.3
 tomli==2.0.1
