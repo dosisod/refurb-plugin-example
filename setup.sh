@@ -37,3 +37,5 @@ sed -i \
 	pyproject.toml
 
 sed -i "s/$old_src_name/$new_src_name/" Makefile
+
+sed -i "s/$old_src_name/$new_src_name/" test/test_checks.py

@@ -35,5 +35,5 @@ jobs:
       - name: Run unit tests
         run: make test
 
-      - name: Run e2e tests
-        run: make test-e2e
+      - name: Self test
+        run: make self-test
