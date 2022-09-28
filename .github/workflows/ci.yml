@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Pip install
+        run: make install
+
+      - name: Run flake8
+        run: make flake8
+
+      - name: Run mypy
+        run: make mypy
+
+      - name: Run black
+        run: make black
+
+      - name: Run isort
+        run: make isort
+
+      - name: Run unit tests
+        run: make test
+
+      - name: Run e2e tests
+        run: make test-e2e
