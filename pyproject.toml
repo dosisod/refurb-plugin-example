@@ -63,7 +63,6 @@ color = true
 addopts = "--cov=refurb_plugin_example --cov-report=html --cov-report=term-missing --cov-fail-under=100"
 
 [tool.refurb]
-load = ["refurb_plugin_example"]
 ignore = []
 
 [build-system]
