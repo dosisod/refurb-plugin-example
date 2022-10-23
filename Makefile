@@ -3,7 +3,7 @@
 all: flake8 black isort test self-test
 
 install:
-	pip install -r requirements.txt
+	pip install .
 	pip install -r dev-requirements.txt
 
 flake8:
