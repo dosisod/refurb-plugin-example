@@ -1,13 +1,13 @@
-.PHONY: install flake8 mypy black isort test self-test
+.PHONY: install ruff mypy black isort test self-test
 
-all: flake8 black isort test self-test
+all: ruff black isort test self-test
 
 install:
 	pip install .
 	pip install -r dev-requirements.txt
 
-flake8:
-	flake8
+ruff:
+	ruff refurb_plugin_example test
 
 mypy:
 	mypy -p refurb_plugin_example
