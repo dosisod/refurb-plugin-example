@@ -23,7 +23,6 @@ refurb = "1.4.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
-flake8 = "^5.0.4"
 isort = "^5.10.1"
 pytest = "^7.1.2"
 
@@ -64,6 +63,21 @@ addopts = "--cov=refurb_plugin_example --cov-report=html --cov-report=term-missi
 
 [tool.refurb]
 ignore = []
+
+[tool.ruff]
+line-length = 80
+
+extend-select = [
+  "W", "N", "UP", "YTT", "S", "BLE", "B",
+  "C4", "DTZ", "ISC", "PIE", "PT", "RET",
+  "SIM", "PTH", "PLE", "RUF", "FBT",
+]
+
+extend-ignore = ["N818", "S101"]
+extend-exclude = ["test/data*"]
+
+[tool.ruff.per-file-ignores]
+"test/*" = ["E501"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
