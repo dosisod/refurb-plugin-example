@@ -19,7 +19,7 @@ classifiers = [
 module = "refurb_plugin_example"
 
 [tool.poetry.dependencies]
-refurb = "1.4.0"
+refurb = ">1.4.0,<2.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
